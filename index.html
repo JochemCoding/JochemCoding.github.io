@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Leuke Webpagina</title>
+    <title>Homework Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,68 +16,107 @@
         h1 {
             color: #4CAF50;
         }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
         .button {
             background-color: #4CAF50;
-            border: none;
             color: white;
-            padding: 15px 32px;
+            border: none;
+            padding: 15px 30px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
+            border-radius: 8px;
             cursor: pointer;
-            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .homework-section {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            display: none;
+        }
+        .homework-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .homework-list li {
+            margin: 5px 0;
+        }
+        .visible {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <h1>Welkom op mijn Webpagina!</h1>
-    <p>Dit is een eenvoudige pagina met een leuk design.</p>
-    <button class="button" onclick="alert(<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage with Headings</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
+
+    <h1>My Homework Page</h1>
+    <p>Click on a button to view your homework documents.</p>
+
+    <div class="button-container">
+        <button class="button" onclick="showSection('math')">Math</button>
+        <button class="button" onclick="showSection('science')">Science</button>
+        <button class="button" onclick="showSection('history')">History</button>
+        <button class="button" onclick="showSection('english')">English</button>
+    </div>
+
+    <!-- Math Homework Section -->
+    <div id="math" class="homework-section">
+        <h2>Math Homework</h2>
+        <ul class="homework-list">
+            <li><a href="documents/math-homework1.pdf" target="_blank">Math Homework 1</a></li>
+            <li><a href="documents/math-homework2.pdf" target="_blank">Math Homework 2</a></li>
+        </ul>
+    </div>
+
+    <!-- Science Homework Section -->
+    <div id="science" class="homework-section">
+        <h2>Science Homework</h2>
+        <ul class="homework-list">
+            <li><a href="documents/science-homework1.pdf" target="_blank">Science Homework 1</a></li>
+            <li><a href="documents/science-homework2.pdf" target="_blank">Science Homework 2</a></li>
+        </ul>
+    </div>
+
+    <!-- History Homework Section -->
+    <div id="history" class="homework-section">
+        <h2>History Homework</h2>
+        <ul class="homework-list">
+            <li><a href="documents/history-homework1.pdf" target="_blank">History Homework 1</a></li>
+            <li><a href="documents/history-homework2.pdf" target="_blank">History Homework 2</a></li>
+        </ul>
+    </div>
+
+    <!-- English Homework Section -->
+    <div id="english" class="homework-section">
+        <h2>English Homework</h2>
+        <ul class="homework-list">
+            <li><a href="documents/english-homework1.pdf" target="_blank">English Homework 1</a></li>
+            <li><a href="documents/english-homework2.pdf" target="_blank">English Homework 2</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.homework-section').forEach(section => {
+                section.classList.remove('visible');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('visible');
         }
-    </style>
-</head>
-<body>
+    </script>
 
-    <!-- Main Page Heading -->
-    <h1>Welcome to My Webpage</h1>
-
-    <!-- Section Heading -->
-    <h2>About This Page</h2>
-    <p>This is a simple webpage where I practice using HTML headings to organize content.</p>
-
-    <!-- Subsection Heading -->
-    <h3>Why Use Headings?</h3>
-    <p>Headings help structure your content and make it easier for users to read and navigate.</p>
-
-    <!-- Another Subsection Heading -->
-    <h3>Different Levels of Headings</h3>
-    <p>Using different levels of headings, like <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, helps create a clear hierarchy of information.</p>
-
-    <!-- Sub-subsection Heading -->
-    <h4>Examples of Headings</h4>
-    <p>Below are examples of various heading levels:</p>
-
-    <!-- Examples of Other Headings -->
-    <h5>Example of an H5 Heading</h5>
-    <p>This is what an H5 heading looks like.</p>
-
-    <h6>Example of an H6 Heading</h6>
-    <p>And this is an H6 heading, usually used sparingly.</p>
-
-</body>
-</html>)"
 </body>
 </html>
