@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework Page Jochem Bosters</title>
     <style>
-        /* Styling for the entire page */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7fa; /* Light grey background */
+            background-color: #f4f7fa;
             color: #333;
             text-align: center;
             padding: 20px;
         }
-
-        /* Main heading style */
         h1 {
-            color: #3b5998; /* Dark blue */
+            color: #3b5998;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
-
-        /* Button container styling for layout */
+        .main-image {
+            max-width: 80%;
+            height: auto;
+            margin: 20px 0; /* Space around the image */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
         .button-container {
             display: flex;
             flex-wrap: wrap;
@@ -30,10 +32,8 @@
             gap: 20px;
             margin-top: 20px;
         }
-
-        /* Button styles */
         .button {
-            background-color: #3b5998; /* Dark blue */
+            background-color: #3b5998;
             color: white;
             border: none;
             padding: 15px 30px;
@@ -45,45 +45,33 @@
             transition: background-color 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
-        /* Hover effect for buttons */
         .button:hover {
-            background-color: #2e4372; /* Slightly darker blue */
+            background-color: #2e4372;
         }
-
-        /* Style for each homework section */
         .homework-section {
             margin-top: 20px;
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            background-color: #ffffff; /* White background */
+            background-color: #ffffff;
             display: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* Style for the list of homework links */
         .homework-list {
             list-style-type: none;
             padding: 0;
         }
-
         .homework-list li {
             margin: 10px 0;
         }
-
-        /* Visible class to show the active section */
         .visible {
             display: block;
         }
-
-        /* Styling the links inside the sections */
         a {
             color: #3b5998;
             text-decoration: none;
             font-weight: bold;
         }
-
         a:hover {
             text-decoration: underline;
         }
@@ -93,6 +81,9 @@
 
     <h1>Homework Page</h1>
     <p>Click on a button to view the exercise documents.</p>
+
+    <!-- Add your main image here -->
+    <img src="images/homepage-image.jpg" alt="Main Image" class="main-image">
 
     <div class="button-container">
         <button class="button" onclick="showSection('exercise2')">Exercise 2</button>
