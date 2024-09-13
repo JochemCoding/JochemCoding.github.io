@@ -81,7 +81,7 @@
         a:hover {
             text-decoration: underline;
         }
-         .video-section {
+          .gif-container {
             margin-top: 60px; /* Increase this value to move the section further down */
             padding: 20px;
             border: 1px solid #ddd;
@@ -91,17 +91,6 @@
             display: flex;
             justify-content: space-around;
             gap: 20px;
-        }
-        .video-container {
-            flex: 1;
-            max-width: 600px; /* Fixed max width for consistent side-by-side appearance */
-            min-width: 300px;
-        }
-        iframe {
-            width: 100%;
-            height: 315px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -155,15 +144,10 @@
                     </ul>
     </div>
 
-    
-    <div class="video-section">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-            <p>Just some music to listen to during coding.</p>
-        </div>
-
+    <div class="gif-container">
+        <img src="https://github.com/JochemCoding/JochemCoding.github.io/blob/main/Coding%20GIF%20-%20Coding%20-%20Discover%20%26%20Share%20GIFs.gif" alt="Homework GIF" class="gif-image">
+        <p>Just some music to listen to during coding.</p>
+    </div>
     
     <script>
         function showSection(sectionId) {
